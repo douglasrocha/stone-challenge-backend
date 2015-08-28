@@ -1,4 +1,4 @@
-﻿using DomainServices.Interfaces.DomainServices;
+﻿using DomainModel.Interfaces.DomainServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,13 @@ namespace ApplicationServices.Services
 {
     public class BaseAppService<T> : IBaseAppService<T>
     {
+        private readonly IBaseService<T> _service;
+
+        public BaseAppService(IBaseService<T> service)
+        {
+            _service = service;
+        }
+
         public IEnumerable<T> GetAll()
         {
             throw new NotImplementedException();

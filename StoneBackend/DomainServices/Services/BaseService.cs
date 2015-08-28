@@ -1,14 +1,22 @@
-﻿using System;
+﻿using DomainModel.Interfaces.DomainServices;
+using DomainModel.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DomainServices.Interfaces.DomainServices;
 
 namespace DomainServices.Services
 {
     public class BaseService<T> : IBaseService<T>
     {
+        private readonly IBaseRepository<T> _repository;
+
+        public BaseService(IBaseRepository<T> repository)
+        {
+            _repository = repository;
+        }
+
         public IEnumerable<T> GetAll()
         {
             throw new NotImplementedException();

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainServices.Interfaces.DomainServices
+namespace DomainModel.Repository.Interfaces
 {
-    public interface ITagService : IBaseAppService<Tag>
+    public interface ITagRepository : IBaseRepository<Tag>
     {
     }
 }

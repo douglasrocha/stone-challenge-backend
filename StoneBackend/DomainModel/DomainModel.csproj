@@ -42,6 +42,18 @@
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\Application\IBaseAppService.cs" />
+    <Compile Include="Interfaces\Application\IPostAppService.cs" />
+    <Compile Include="Interfaces\Application\ITagAppService.cs" />
+    <Compile Include="Interfaces\Application\IUserAppService.cs" />
+    <Compile Include="Interfaces\DomainServices\IBaseService.cs" />
+    <Compile Include="Interfaces\DomainServices\IPostService .cs" />
+    <Compile Include="Interfaces\DomainServices\ITagService.cs" />
+    <Compile Include="Interfaces\DomainServices\IUserService.cs" />
+    <Compile Include="Interfaces\Repository\IBaseRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPostRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITagRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

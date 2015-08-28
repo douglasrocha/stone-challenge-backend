@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainServices.Interfaces.DomainServices
+namespace DomainModel.Repository.Interfaces
 {
-    public interface IBaseAppService<T>
+    public interface IBaseRepository<T>
     {
         IEnumerable<T> GetAll();
 

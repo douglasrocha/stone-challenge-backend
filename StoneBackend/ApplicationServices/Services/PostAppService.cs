@@ -1,5 +1,5 @@
 ﻿using DomainModel.Entities;
-using DomainServices.Interfaces.DomainServices;
+using DomainModel.Interfaces.DomainServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace ApplicationServices.Services
 {
-    public class PostAppService : IBaseAppService<Post>, IPostAppService
+    public class PostAppService : BaseAppService<Post>, IPostAppService
     {
+        public PostAppService(IBaseService<Post> service) : base(service)
+        {
+        }
     }
 }

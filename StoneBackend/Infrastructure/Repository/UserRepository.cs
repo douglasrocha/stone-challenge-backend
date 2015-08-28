@@ -1,5 +1,5 @@
 ﻿using DomainModel.Entities;
-using Infrastructure.Repository.Interfaces;
+using DomainModel.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class UserRepository : IBaseRepository<User>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
     }
 }

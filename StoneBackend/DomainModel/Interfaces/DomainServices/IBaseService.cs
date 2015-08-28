@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainServices.Interfaces.DomainServices
+namespace DomainModel.Interfaces.DomainServices
 {
     public interface IBaseService<T>
     {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Repository.Interfaces
+namespace DomainModel.Interfaces.DomainServices
 {
-    interface IUserRepository : IBaseRepository<User>
+    public interface ITagAppService : IBaseAppService<Tag>
     {
     }
 }

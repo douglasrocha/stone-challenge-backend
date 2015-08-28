@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Repository.Interfaces
+namespace DomainModel.Repository.Interfaces
 {
-    public interface ITagRepository : IBaseRepository<Tag>
+    public interface IPostRepository : IBaseRepository<Post>
     {
     }
 }

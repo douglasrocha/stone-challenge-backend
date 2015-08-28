@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Repository.Interfaces
+namespace DomainModel.Interfaces.DomainServices
 {
-    public interface IPostRepository : IBaseRepository<Post>
+    public interface IUserService : IBaseAppService<User>
     {
     }
 }
