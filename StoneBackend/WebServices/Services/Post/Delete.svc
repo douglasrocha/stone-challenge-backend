@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebServices.Services.Post.Delete" CodeBehind="Delete.svc.cs" %>

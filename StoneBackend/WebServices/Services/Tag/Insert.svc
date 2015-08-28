@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebServices.Services.Tag.Insert" CodeBehind="Insert.svc.cs" %>
