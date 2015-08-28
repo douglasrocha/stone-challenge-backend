@@ -43,6 +43,7 @@
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Exceptions\DomainException.cs" />
     <Compile Include="Interfaces\Application\IBaseAppService.cs" />
     <Compile Include="Interfaces\Application\IPostAppService.cs" />
     <Compile Include="Interfaces\Application\ITagAppService.cs" />
