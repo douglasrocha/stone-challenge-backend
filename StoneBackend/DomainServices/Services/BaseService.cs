@@ -1,4 +1,5 @@
 ﻿using DomainModel.Entities;
+using DomainModel.Exceptions;
 using DomainModel.Interfaces.DomainServices;
 using DomainModel.Repository.Interfaces;
 using System;
@@ -35,21 +36,41 @@ namespace DomainServices.Services
 
         public int Insert(T obj)
         {
+            if (!obj.IsValid())
+            {
+                throw new DomainException();
+            }
+
             return _repository.Insert(obj);
         }
 
         public int Insert(IEnumerable<T> obj)
         {
+            if (!obj.All(a => a.IsValid()))
+            {
+                throw new DomainException();
+            }
+
             return _repository.Insert(obj);
         }
 
         public int Update(T obj)
         {
+            if (!obj.IsValid())
+            {
+                throw new DomainException();
+            }
+
             return _repository.Update(obj);
         }
 
         public int Update(IEnumerable<T> obj)
         {
+            if (!obj.All(a => a.IsValid()))
+            {
+                throw new DomainException();
+            }
+
             return _repository.Update(obj);
         }
 
