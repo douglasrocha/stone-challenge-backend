@@ -1,4 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DomainModel.Entities;
+using DomainModel.Repository.Interfaces;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +11,17 @@ using System.Threading.Tasks;
 namespace UnitTest.Domain
 {
     [TestClass]
-    public class User
+    public class UserTest
     {
         [TestMethod]
         public void DUser_Insert_Invalid_Element()
         {
-            Assert.IsFalse(true);
+            var a = Substitute.For<IUserRepository>();
+            var obj = new User();
+
+            a.Insert(obj).Returns(0);
+
+            Assert.AreEqual(0, a.Insert(obj));
         }
 
         [TestMethod]

@@ -70,6 +70,28 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationServices\ApplicationServices.csproj">
+      <Project>{9f876b9d-bfc5-40fd-a2ee-84c03a40ea38}</Project>
+      <Name>ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{988bddfd-e91c-4e0c-874a-eb6d527f22b0}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainServices\DomainServices.csproj">
+      <Project>{0b271a5a-f8a1-423b-9103-ad7761ade777}</Project>
+      <Name>DomainServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{901d923c-a3ad-4928-8547-931fae90d652}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServices\WebServices.csproj">
+      <Project>{4fb72ab2-361d-487f-8922-b9f4af4ef2aa}</Project>
+      <Name>WebServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

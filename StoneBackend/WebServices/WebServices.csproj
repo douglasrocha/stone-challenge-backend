@@ -60,6 +60,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service1.svc" />
+    <Content Include="Services\Post\Delete.svc" />
+    <Content Include="Services\Post\GetAll.svc" />
+    <Content Include="Services\Post\GetById.svc" />
+    <Content Include="Services\Post\Insert.svc" />
+    <Content Include="Services\Post\Update.svc" />
+    <Content Include="Services\Tag\Delete.svc" />
+    <Content Include="Services\Tag\GetAll.svc" />
+    <Content Include="Services\Tag\GetById.svc" />
+    <Content Include="Services\Tag\Insert.svc" />
+    <Content Include="Services\Tag\Update.svc" />
+    <Content Include="Services\User\Delete.svc" />
+    <Content Include="Services\User\GetAll.svc" />
+    <Content Include="Services\User\GetById.svc" />
+    <Content Include="Services\User\Insert.svc" />
+    <Content Include="Services\User\Update.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +83,51 @@
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Post\Delete.svc.cs">
+      <DependentUpon>Delete.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Post\GetAll.svc.cs">
+      <DependentUpon>GetAll.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Post\GetById.svc.cs">
+      <DependentUpon>GetById.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Post\Insert.svc.cs">
+      <DependentUpon>Insert.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Post\Update.svc.cs">
+      <DependentUpon>Update.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Tag\Delete.svc.cs">
+      <DependentUpon>Delete.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Tag\GetAll.svc.cs">
+      <DependentUpon>GetAll.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Tag\GetById.svc.cs">
+      <DependentUpon>GetById.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Tag\Insert.svc.cs">
+      <DependentUpon>Insert.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Tag\Update.svc.cs">
+      <DependentUpon>Update.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\User\Delete.svc.cs">
+      <DependentUpon>Delete.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\User\GetAll.svc.cs">
+      <DependentUpon>GetAll.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\User\GetById.svc.cs">
+      <DependentUpon>GetById.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\User\Insert.svc.cs">
+      <DependentUpon>Insert.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\User\Update.svc.cs">
+      <DependentUpon>Update.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
