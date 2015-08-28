@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace DomainModel.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
+
+        public override bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

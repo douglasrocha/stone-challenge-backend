@@ -1,4 +1,5 @@
-﻿using DomainModel.Interfaces.DomainServices;
+﻿using DomainModel.Entities;
+using DomainModel.Interfaces.DomainServices;
 using DomainModel.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DomainServices.Services
 {
-    public class BaseService<T> : IBaseService<T>
+    public class BaseService<T> : IBaseService<T> where T : BaseEntity
     {
         private readonly IBaseRepository<T> _repository;
 

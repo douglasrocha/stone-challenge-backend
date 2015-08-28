@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainModel.Entities
 {
-    public class Post
+    public class Post : BaseEntity
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -14,5 +14,10 @@ namespace DomainModel.Entities
         public DateTime CreationDate { get; set; }
         public User Author { get; set; }
         public List<Tag> Tags { get; set; }
+
+        public override bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

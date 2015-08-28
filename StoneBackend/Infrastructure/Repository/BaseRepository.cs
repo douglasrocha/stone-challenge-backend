@@ -1,4 +1,5 @@
-﻿using DomainModel.Repository.Interfaces;
+﻿using DomainModel.Entities;
+using DomainModel.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class BaseRepository<T> : IBaseRepository<T>
+    public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         public IEnumerable<T> GetAll()
         {

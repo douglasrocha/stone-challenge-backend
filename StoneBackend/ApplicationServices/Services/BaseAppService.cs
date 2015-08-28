@@ -1,4 +1,5 @@
-﻿using DomainModel.Interfaces.DomainServices;
+﻿using DomainModel.Entities;
+using DomainModel.Interfaces.DomainServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationServices.Services
 {
-    public class BaseAppService<T> : IBaseAppService<T>
+    public class BaseAppService<T> : IBaseAppService<T> where T : BaseEntity
     {
         private readonly IBaseService<T> _service;
 

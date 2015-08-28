@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace DomainModel.Entities
 {
-    public class Tag
+    public class Tag : BaseEntity
     {
         public int Id { get; set; }
         List<Post> Posts { get; set; }
+
+        public override bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
