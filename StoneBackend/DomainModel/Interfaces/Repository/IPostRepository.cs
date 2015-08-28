@@ -9,5 +9,8 @@ namespace DomainModel.Repository.Interfaces
 {
     public interface IPostRepository : IBaseRepository<Post>
     {
+        int GetAllPostsCount();
+
+        List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex);
     }
 }

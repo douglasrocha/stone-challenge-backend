@@ -9,5 +9,6 @@ namespace DomainModel.Repository.Interfaces
 {
     public interface ITagRepository : IBaseRepository<Tag>
     {
+
     }
 }

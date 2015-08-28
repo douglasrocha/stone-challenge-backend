@@ -15,5 +15,15 @@ namespace DomainServices.Services
         {
 
         }
+
+        public int GetAllPostsCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

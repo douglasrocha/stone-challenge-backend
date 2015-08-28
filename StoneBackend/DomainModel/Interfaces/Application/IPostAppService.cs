@@ -9,5 +9,8 @@ namespace DomainModel.Interfaces.DomainServices
 {
     public interface IPostAppService : IBaseAppService<Post>
     {
+        int GetAllPostsCount();
+
+        List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex);
     }
 }

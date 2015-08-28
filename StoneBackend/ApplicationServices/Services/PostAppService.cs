@@ -13,5 +13,15 @@ namespace ApplicationServices.Services
         public PostAppService(IBaseService<Post> service) : base(service)
         {
         }
+
+        public int GetAllPostsCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

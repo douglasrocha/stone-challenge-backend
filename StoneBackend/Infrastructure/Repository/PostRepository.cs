@@ -10,5 +10,14 @@ namespace Infrastructure.Repository
 {
     public class PostRepository : BaseRepository<Post>, IPostRepository
     {
+        public int GetAllPostsCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
