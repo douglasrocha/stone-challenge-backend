@@ -58,6 +58,19 @@ namespace Infrastructure.Repository
             using (var context = new BlogContext())
             {
                 context.Set<T>().Attach(obj);
+                var entry = context.Entry(obj);
+                
+                foreach (var property in entry.OriginalValues.PropertyNames)
+                {
+                    var original = entry.OriginalValues.GetValue<object>(property);
+                    var current = entry.CurrentValues.GetValue<object>(property);
+
+                    if (original != null && !original.Equals(current))
+                    {
+                        entry.Property(property).IsModified = true;
+                    }
+                }
+
                 return context.SaveChanges();
             }
         }
@@ -69,6 +82,18 @@ namespace Infrastructure.Repository
                 foreach (var item in obj)
                 {
                     context.Set<T>().Attach(item);
+                    var entry = context.Entry(item);
+
+                    foreach (var property in entry.OriginalValues.PropertyNames)
+                    {
+                        var original = entry.OriginalValues.GetValue<object>(property);
+                        var current = entry.CurrentValues.GetValue<object>(property);
+
+                        if (original != null && !original.Equals(current))
+                        {
+                            entry.Property(property).IsModified = true;
+                        }
+                    }
                 }
 
                 return context.SaveChanges();
