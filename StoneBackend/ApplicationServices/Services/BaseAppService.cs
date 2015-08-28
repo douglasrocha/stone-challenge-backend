@@ -18,47 +18,47 @@ namespace ApplicationServices.Services
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _service.GetAll();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return _service.GetById(id);
         }
 
         public IEnumerable<T> GetByIds(IEnumerable<int> id)
         {
-            throw new NotImplementedException();
+            return _service.GetByIds(id);
         }
 
         public bool Insert(T obj)
         {
-            throw new NotImplementedException();
+            return _service.Insert(obj);
         }
 
         public bool Insert(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _service.Insert(obj);
         }
 
         public bool Update(T obj)
         {
-            throw new NotImplementedException();
+            return _service.Update(obj);
         }
 
         public bool Update(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _service.Update(obj);
         }
 
         public bool Delete(T obj)
         {
-            throw new NotImplementedException();
+            return _service.Delete(obj);
         }
 
         public bool Delete(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _service.Delete(obj);
         }
     }
 }

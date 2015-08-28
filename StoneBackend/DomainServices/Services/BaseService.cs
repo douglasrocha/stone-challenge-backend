@@ -19,47 +19,47 @@ namespace DomainServices.Services
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _repository.GetAll();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return _repository.GetById(id);
         }
 
         public IEnumerable<T> GetByIds(IEnumerable<int> id)
         {
-            throw new NotImplementedException();
+            return _repository.GetByIds(id);
         }
 
         public bool Insert(T obj)
         {
-            throw new NotImplementedException();
+            return _repository.Insert(obj);
         }
 
         public bool Insert(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _repository.Insert(obj);
         }
 
         public bool Update(T obj)
         {
-            throw new NotImplementedException();
+            return _repository.Update(obj);
         }
 
         public bool Update(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _repository.Update(obj);
         }
 
         public bool Delete(T obj)
         {
-            throw new NotImplementedException();
+            return _repository.Delete(obj);
         }
 
         public bool Delete(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            return _repository.Delete(obj);
         }
     }
 }
