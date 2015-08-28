@@ -1,5 +1,6 @@
 ﻿using DomainModel.Entities;
 using DomainModel.Repository.Interfaces;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,18 @@ namespace Infrastructure.Repository
     {
         public int GetAllPostsCount()
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                return context.Posts.Count();
+            }
         }
 
         public List<Post> GetFirstPostsOrderedByDate(int numberOfPosts, int startIndex)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                throw new NotImplementedException();           
+            }
         }
     }
 }
