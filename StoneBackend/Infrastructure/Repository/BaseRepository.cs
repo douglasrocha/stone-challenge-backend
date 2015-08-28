@@ -1,5 +1,6 @@
 ﻿using DomainModel.Entities;
 using DomainModel.Repository.Interfaces;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,47 +13,84 @@ namespace Infrastructure.Repository
     {
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                return context.Set<T>().ToList();
+            }
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                return context.Set<T>().Find(id);
+            }
         }
 
-        public IEnumerable<T> GetByIds(IEnumerable<int> id)
+        public IEnumerable<T> GetByIds(IEnumerable<int> ids)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                return context.Set<T>().Where(a => ids.Contains(a.Id));
+            }
         }
 
-        public bool Insert(T obj)
+        public int Insert(T obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                context.Set<T>().Add(obj);
+                return context.SaveChanges();
+            }
         }
 
-        public bool Insert(IEnumerable<T> obj)
+        public int Insert(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                context.Set<T>().AddRange(obj);
+                return context.SaveChanges();
+            } 
         }
 
-        public bool Update(T obj)
+        public int Update(T obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                context.Set<T>().Attach(obj);
+                return context.SaveChanges();
+            }
         }
 
-        public bool Update(IEnumerable<T> obj)
+        public int Update(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                foreach (var item in obj)
+                {
+                    context.Set<T>().Attach(item);
+                }
+
+                return context.SaveChanges();
+            }
         }
 
-        public bool Delete(T obj)
+        public int Delete(T obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                context.Set<T>().Remove(obj);
+                return context.SaveChanges();
+            }
         }
 
-        public bool Delete(IEnumerable<T> obj)
+        public int Delete(IEnumerable<T> obj)
         {
-            throw new NotImplementedException();
+            using (var context = new BlogContext())
+            {
+                context.Set<T>().RemoveRange(obj);
+                return context.SaveChanges();
+            }
         }
     }
 }

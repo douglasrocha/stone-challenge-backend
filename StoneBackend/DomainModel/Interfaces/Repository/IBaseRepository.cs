@@ -14,13 +14,13 @@ namespace DomainModel.Repository.Interfaces
         T GetById(int id);
         IEnumerable<T> GetByIds(IEnumerable<int> id);
 
-        bool Insert(T obj);
-        bool Insert(IEnumerable<T> obj);
+        int Insert(T obj);
+        int Insert(IEnumerable<T> obj);
 
-        bool Update(T obj);
-        bool Update(IEnumerable<T> obj);
+        int Update(T obj);
+        int Update(IEnumerable<T> obj);
 
-        bool Delete(T obj);
-        bool Delete(IEnumerable<T> obj);
+        int Delete(T obj);
+        int Delete(IEnumerable<T> obj);
     }
 }

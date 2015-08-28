@@ -2,6 +2,7 @@
 using DomainModel.Interfaces.DomainServices;
 using DomainModel.Repository.Interfaces;
 using DomainServices.Services;
+using Infrastructure.Data;
 using Infrastructure.Repository;
 using Ninject.Modules;
 using System;

@@ -33,32 +33,32 @@ namespace DomainServices.Services
             return _repository.GetByIds(id);
         }
 
-        public bool Insert(T obj)
+        public int Insert(T obj)
         {
             return _repository.Insert(obj);
         }
 
-        public bool Insert(IEnumerable<T> obj)
+        public int Insert(IEnumerable<T> obj)
         {
             return _repository.Insert(obj);
         }
 
-        public bool Update(T obj)
+        public int Update(T obj)
         {
             return _repository.Update(obj);
         }
 
-        public bool Update(IEnumerable<T> obj)
+        public int Update(IEnumerable<T> obj)
         {
             return _repository.Update(obj);
         }
 
-        public bool Delete(T obj)
+        public int Delete(T obj)
         {
             return _repository.Delete(obj);
         }
 
-        public bool Delete(IEnumerable<T> obj)
+        public int Delete(IEnumerable<T> obj)
         {
             return _repository.Delete(obj);
         }

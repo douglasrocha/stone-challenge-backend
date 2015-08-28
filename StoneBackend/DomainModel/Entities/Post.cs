@@ -8,7 +8,6 @@ namespace DomainModel.Entities
 {
     public class Post : BaseEntity
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
         public DateTime CreationDate { get; set; }
