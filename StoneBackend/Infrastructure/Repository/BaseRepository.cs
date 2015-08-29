@@ -40,7 +40,6 @@ namespace Infrastructure.Repository
         {
             using (var context = new BlogContext())
             {
-                //context.Posts.Add(obj as Post);
                 context.Set<T>().Add(obj);
                 return context.SaveChanges();
             }
@@ -86,7 +85,9 @@ namespace Infrastructure.Repository
         {
             using (var context = new BlogContext())
             {
-                context.Set<T>().Remove(obj);
+                context.Set<T>().Attach(obj);
+                var entry = context.Entry(obj);
+                entry.State = EntityState.Deleted;
                 return context.SaveChanges();
             }
         }
@@ -95,7 +96,13 @@ namespace Infrastructure.Repository
         {
             using (var context = new BlogContext())
             {
-                context.Set<T>().RemoveRange(obj);
+                foreach (var item in obj)
+                {
+                    context.Set<T>().Attach(item);
+                    var entry = context.Entry(item);
+                    entry.State = EntityState.Deleted;
+                }
+
                 return context.SaveChanges();
             }
         }
