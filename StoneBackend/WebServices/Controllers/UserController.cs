@@ -5,21 +5,32 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DomainModel.Entities;
+using DomainModel.Interfaces.DomainServices;
+using Infrastructure.Modules;
+using Ninject;
 
 namespace WebServices.Controllers
 {
     public class UserController : ApiController
     {
-        // GET api/user
-        public IEnumerable<string> Get()
+        private IUserAppService AppService
         {
-            return new string[] { "value1", "value2" };
+            get
+            {
+                return new StandardKernel(new BlogModule()).Get<IUserAppService>();
+            }
+        }
+
+        // GET api/user
+        public IEnumerable<User> Get()
+        {
+            return AppService.GetAll();
         }
 
         // GET api/user/5
-        public string Get(int id)
+        public User Get(int id)
         {
-            return "value";
+            return AppService.GetById(id);
         }
 
         // POST api/user

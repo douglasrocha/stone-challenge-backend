@@ -1,26 +1,37 @@
-﻿using System;
+﻿using DomainModel.Entities;
+using DomainModel.Interfaces.DomainServices;
+using Infrastructure.Modules;
+using Newtonsoft.Json;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using DomainModel.Entities;
-using Newtonsoft.Json;
 
 namespace WebServices.Controllers
 {
     public class PostController : ApiController
     {
-        // GET api/post
-        public IEnumerable<string> Get()
+        private IPostAppService AppService
         {
-            return new string[] { "value1", "value2" };
+            get
+            {
+                return new StandardKernel(new BlogModule()).Get<IPostAppService>();
+            }
+        }
+
+        // GET api/post
+        public IEnumerable<Post> Get()
+        {
+            return AppService.GetAll();
         }
 
         // GET api/post/5
         public Post Get(int id)
         {
-            return new Post { Id = id, Title = "Titulo", Body = "Body", CreationDate = DateTime.Now, Author = null, Tags = null };
+            return AppService.GetById(id);
         }
 
         // POST api/post
