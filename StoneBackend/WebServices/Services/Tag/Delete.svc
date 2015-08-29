@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebServices.Services.Tag.Delete" CodeBehind="Delete.svc.cs" %>
