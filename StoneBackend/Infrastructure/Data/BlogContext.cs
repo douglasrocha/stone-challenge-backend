@@ -14,9 +14,11 @@ namespace Infrastructure.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Post> Posts { get; set; }
 
-        public BlogContext() : base()
+        public BlogContext()
         {
             Database.Connection.ConnectionString = "Data Source=blog_server;Initial Catalog=bd_blog;Persist Security Info=True;User ID=myuser;Password=mypassword";
+            
+            this.Database.CreateIfNotExists();
         }
     }
 }

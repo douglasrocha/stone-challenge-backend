@@ -18,16 +18,19 @@ namespace Infrastructure.Modules
         public override void Load()
         {
             // Repositories
+            Bind(typeof(IBaseRepository<>)).To(typeof(BaseRepository<>));
             Bind<IUserRepository>().To<UserRepository>();
             Bind<IPostRepository>().To<PostRepository>();
             Bind<ITagRepository>().To<TagRepository>();
 
             // Domain Services
+            Bind(typeof(IBaseService<>)).To(typeof(BaseService<>));
             Bind<IUserService>().To<UserService>();
             Bind<IPostService>().To<PostService>();
             Bind<ITagService>().To<TagService>();
 
             // Application Services
+            Bind(typeof(IBaseAppService<>)).To(typeof(BaseAppService<>));
             Bind<IUserAppService>().To<UserAppService>();
             Bind<IPostAppService>().To<PostAppService>();
             Bind<ITagAppService>().To<TagAppService>();

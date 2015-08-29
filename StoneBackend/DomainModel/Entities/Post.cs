@@ -16,7 +16,7 @@ namespace DomainModel.Entities
 
         public override bool IsValid()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

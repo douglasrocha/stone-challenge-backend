@@ -3,6 +3,7 @@ using DomainModel.Repository.Interfaces;
 using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,7 @@ namespace Infrastructure.Repository
         {
             using (var context = new BlogContext())
             {
+                //context.Posts.Add(obj as Post);
                 context.Set<T>().Add(obj);
                 return context.SaveChanges();
             }
@@ -59,17 +61,7 @@ namespace Infrastructure.Repository
             {
                 context.Set<T>().Attach(obj);
                 var entry = context.Entry(obj);
-                
-                foreach (var property in entry.OriginalValues.PropertyNames)
-                {
-                    var original = entry.OriginalValues.GetValue<object>(property);
-                    var current = entry.CurrentValues.GetValue<object>(property);
-
-                    if (original != null && !original.Equals(current))
-                    {
-                        entry.Property(property).IsModified = true;
-                    }
-                }
+                entry.State = EntityState.Modified;
 
                 return context.SaveChanges();
             }
@@ -83,17 +75,7 @@ namespace Infrastructure.Repository
                 {
                     context.Set<T>().Attach(item);
                     var entry = context.Entry(item);
-
-                    foreach (var property in entry.OriginalValues.PropertyNames)
-                    {
-                        var original = entry.OriginalValues.GetValue<object>(property);
-                        var current = entry.CurrentValues.GetValue<object>(property);
-
-                        if (original != null && !original.Equals(current))
-                        {
-                            entry.Property(property).IsModified = true;
-                        }
-                    }
+                    entry.State = EntityState.Modified;
                 }
 
                 return context.SaveChanges();

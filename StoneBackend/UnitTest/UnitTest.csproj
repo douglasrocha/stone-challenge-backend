@@ -61,7 +61,7 @@
     <Compile Include="Domain\Specification\Tag.cs" />
     <Compile Include="Domain\Specification\User.cs" />
     <Compile Include="Domain\Tag.cs" />
-    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserTest.cs" />
     <Compile Include="Infrastructure\Repository\Post.cs" />
     <Compile Include="Infrastructure\Repository\Tag.cs" />
     <Compile Include="Infrastructure\Repository\User.cs" />
