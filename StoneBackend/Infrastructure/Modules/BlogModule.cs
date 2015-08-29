@@ -4,6 +4,8 @@ using DomainModel.Repository.Interfaces;
 using DomainServices.Services;
 using Infrastructure.Data;
 using Infrastructure.Repository;
+using Infrastructure.Services;
+using Infrastructure.Services.Interfaces;
 using Ninject.Modules;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,9 @@ namespace Infrastructure.Modules
             Bind<IUserAppService>().To<UserAppService>();
             Bind<IPostAppService>().To<PostAppService>();
             Bind<ITagAppService>().To<TagAppService>();
+
+            // Infrastructure
+            Bind<IJsonService>().To<JsonService>();
         }
     }
 }

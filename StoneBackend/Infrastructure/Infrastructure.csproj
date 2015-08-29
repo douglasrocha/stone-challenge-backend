@@ -60,7 +60,8 @@
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\TagRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="Services\InjectionService.cs" />
+    <Compile Include="Services\Interfaces\IJsonService.cs" />
+    <Compile Include="Services\JsonService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApplicationServices\ApplicationServices.csproj">
