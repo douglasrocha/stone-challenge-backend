@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DomainModel.Entities;
+using Newtonsoft.Json;
 
 namespace WebServices.Controllers
 {

@@ -53,19 +53,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Application\Post.cs" />
-    <Compile Include="Application\Tag.cs" />
-    <Compile Include="Application\User.cs" />
-    <Compile Include="Domain\Post.cs" />
-    <Compile Include="Domain\Specification\Post.cs" />
-    <Compile Include="Domain\Specification\Tag.cs" />
-    <Compile Include="Domain\Specification\User.cs" />
-    <Compile Include="Domain\Tag.cs" />
-    <Compile Include="Domain\UserTest.cs" />
-    <Compile Include="Infrastructure\Repository\Post.cs" />
-    <Compile Include="Infrastructure\Repository\Tag.cs" />
-    <Compile Include="Infrastructure\Repository\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebServices\PostTest.cs" />
+    <Compile Include="WebServices\TagTest.cs" />
+    <Compile Include="WebServices\UserTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
