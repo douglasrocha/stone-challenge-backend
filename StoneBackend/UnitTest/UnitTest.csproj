@@ -87,10 +87,6 @@
       <Project>{901d923c-a3ad-4928-8547-931fae90d652}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebServices\WebServices.csproj">
-      <Project>{4fb72ab2-361d-487f-8922-b9f4af4ef2aa}</Project>
-      <Name>WebServices</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
