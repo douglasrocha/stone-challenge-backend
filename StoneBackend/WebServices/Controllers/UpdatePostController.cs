@@ -1,15 +1,21 @@
 ﻿using DomainModel.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using DomainModel.Interfaces.DomainServices;
+using Infrastructure.Modules;
+using Ninject;
 using System.Web.Http;
 
 namespace WebServices.Controllers
 {
     public class UpdatePostController : ApiController
     {
+        private IPostAppService AppService
+        {
+            get
+            {
+                return new StandardKernel(new BlogModule()).Get<IPostAppService>();
+            }
+        }
+
         // GET api/updatepost
         public void Get()
         {
@@ -21,8 +27,9 @@ namespace WebServices.Controllers
         }
 
         // POST api/updatepost
-        public void Post([FromBody]Post value)
+        public int Post(Post value)
         {
+            return AppService.Update(value);
         }
 
         // PUT api/updatepost/5

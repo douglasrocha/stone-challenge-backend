@@ -1,14 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using DomainModel.Entities;
+using DomainModel.Interfaces.DomainServices;
+using Infrastructure.Modules;
+using Ninject;
 using System.Web.Http;
 
 namespace WebServices.Controllers
 {
     public class InsertTagController : ApiController
     {
+        private ITagAppService AppService
+        {
+            get
+            {
+                return new StandardKernel(new BlogModule()).Get<ITagAppService>();
+            }
+        }
+
         // GET api/updatepost
         public void Get()
         {
@@ -20,8 +27,9 @@ namespace WebServices.Controllers
         }
 
         // POST api/inserttag
-        public void Post([FromBody]string value)
+        public int Post(Tag value)
         {
+            return AppService.Insert(value);
         }
 
         // PUT api/inserttag/5
