@@ -9,16 +9,14 @@ namespace WebServices.Controllers
 {
     public class UpdateUserController : ApiController
     {
-        // GET api/updateuser
-        public IEnumerable<string> Get()
+        // GET api/updatepost
+        public void Get()
         {
-            return new string[] { "value1", "value2" };
         }
 
-        // GET api/updateuser/5
-        public string Get(int id)
+        // GET api/updatepost/5
+        public void Get(int id)
         {
-            return "value";
         }
 
         // POST api/updateuser

@@ -9,16 +9,14 @@ namespace WebServices.Controllers
 {
     public class DeletePostController : ApiController
     {
-        // GET api/deletepost
-        public IEnumerable<string> Get()
+        // GET api/updatepost
+        public void Get()
         {
-            return new string[] { "value1", "value2" };
         }
 
-        // GET api/deletepost/5
-        public string Get(int id)
+        // GET api/updatepost/5
+        public void Get(int id)
         {
-            return "value";
         }
 
         // POST api/deletepost

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainModel.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,19 +11,17 @@ namespace WebServices.Controllers
     public class UpdatePostController : ApiController
     {
         // GET api/updatepost
-        public IEnumerable<string> Get()
+        public void Get()
         {
-            return new string[] { "value1", "value2" };
         }
 
         // GET api/updatepost/5
-        public string Get(int id)
+        public void Get(int id)
         {
-            return "value";
         }
 
         // POST api/updatepost
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Post value)
         {
         }
 
