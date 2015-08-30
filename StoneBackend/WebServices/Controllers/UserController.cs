@@ -8,9 +8,11 @@ using DomainModel.Entities;
 using DomainModel.Interfaces.DomainServices;
 using Infrastructure.Modules;
 using Ninject;
+using System.Web.Http.Cors;
 
 namespace WebServices.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
         private IUserAppService AppService

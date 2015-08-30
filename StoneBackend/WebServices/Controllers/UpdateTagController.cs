@@ -3,9 +3,11 @@ using DomainModel.Interfaces.DomainServices;
 using Infrastructure.Modules;
 using Ninject;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace WebServices.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UpdateTagController : ApiController
     {
         private ITagAppService AppService
