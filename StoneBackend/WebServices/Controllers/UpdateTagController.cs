@@ -7,7 +7,6 @@ using System.Web.Http.Cors;
 
 namespace WebServices.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UpdateTagController : ApiController
     {
         private ITagAppService AppService
